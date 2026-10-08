@@ -1,7 +1,6 @@
 # Coral NPU BF16 multiply-accumulate: before and after
 
-Copyright (c) 2026 Leo Strijbos and Tom de Vrieze. Provided to Rebellions for evaluation only;
-not for redistribution. Coral NPU's own files in `rtl/coral-original/` keep their Apache-2.0 and
+Copyright (c) 2026 Leo Strijbos and Tom de Vrieze. Coral NPU's own files in `rtl/coral-original/` keep their Apache-2.0 and
 Solderpad 0.51 licences.
 
 This package contains the RTL of two designs that compute the same BF16 dot product, and
