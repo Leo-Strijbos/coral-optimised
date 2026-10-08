@@ -1,0 +1,11 @@
+#include "Vcoral_bf16_tile_add.h"
+#include <cstdio>
+int main(int argc, char** argv) {
+  Vcoral_bf16_tile_add m; FILE* f = fopen(argv[1], "r");
+  m.clk = 0; m.eval();
+  while (true) {
+    { unsigned long long v; if (fscanf(f, "%llx", &v) != 1) return 0; m.x0 = (unsigned int)v; } { unsigned long long v; if (fscanf(f, "%llx", &v) != 1) return 0; m.x1 = (unsigned int)v; }
+    m.clk = 0; m.eval(); m.clk = 1; m.eval();
+    printf("%llx", (unsigned long long)m.y); printf("\n");
+  }
+}

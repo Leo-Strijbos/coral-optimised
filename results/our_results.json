@@ -1,0 +1,93 @@
+{
+ "flow": {
+  "library": "ASAP7 (predictive 7 nm)",
+  "tools": "OpenROAD-flow-scripts, image openroad/orfs@sha256:73d4aed887dc0552b2c8ad0581e10821ad4f9cf290a2436e54fb5c47ca132120",
+  "clock_ps": 2500,
+  "core_utilization_pct": 40,
+  "seeds": [
+   42,
+   7,
+   123
+  ],
+  "power": "activity from the vectors in flow/vectors, layout of seed 42"
+ },
+ "modules": {
+  "coral_bf16_pair": {
+   "layouts": [
+    {
+     "seed": 42,
+     "area_um2": 362.123,
+     "worst_slack_ps": 112.963
+    },
+    {
+     "seed": 7,
+     "area_um2": 362.138,
+     "worst_slack_ps": 111.573
+    },
+    {
+     "seed": 123,
+     "area_um2": 362.969,
+     "worst_slack_ps": 135.197
+    }
+   ],
+   "mean_area_um2": 362.41,
+   "power_mW_seed42": 0.421
+  },
+  "coral_bf16_tile_add": {
+   "layouts": [
+    {
+     "seed": 42,
+     "area_um2": 350.532,
+     "worst_slack_ps": 70.9279
+    },
+    {
+     "seed": 7,
+     "area_um2": 349.483,
+     "worst_slack_ps": 66.9431
+    },
+    {
+     "seed": 123,
+     "area_um2": 350.037,
+     "worst_slack_ps": 70.6508
+    }
+   ],
+   "mean_area_um2": 350.02,
+   "power_mW_seed42": 0.377
+  },
+  "bf16_block16": {
+   "layouts": [
+    {
+     "seed": 42,
+     "area_um2": 2224.51,
+     "worst_slack_ps": 93.2405
+    },
+    {
+     "seed": 7,
+     "area_um2": 2221.6,
+     "worst_slack_ps": 85.6397
+    },
+    {
+     "seed": 123,
+     "area_um2": 2224.43,
+     "worst_slack_ps": 77.3421
+    }
+   ],
+   "mean_area_um2": 2223.51,
+   "power_mW_seed42": 3.24
+  }
+ },
+ "per_product": {
+  "before": {
+   "area_um2": 356.2,
+   "energy_pJ": 0.9975,
+   "pipeline_stages": 3
+  },
+  "after": {
+   "area_um2": 139.0,
+   "energy_pJ": 0.5063,
+   "pipeline_stages": 5
+  },
+  "area_saving_pct": 61.0,
+  "energy_saving_pct": 49.2
+ }
+}
